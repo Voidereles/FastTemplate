@@ -5,6 +5,16 @@ a {
   border-radius: 0 !important;
 }
 
+p {
+  font-size: 14px;
+  line-height: 26px;
+  color: #51545f;
+}
+
+* {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
 .btn-outline-success {
   color: #2bc0a4;
   background-color: transparent;
@@ -52,7 +62,8 @@ a {
 }
 
 .navbar {
-  height: 60px;
+  height: 80px;
+  padding: 0px 75px;
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -75,12 +86,17 @@ a {
   color: #2bc0a4;
 }
 
+.navbar-nav .nav-item:not(:last-of-type) {
+  margin-right: 50px;
+}
+
 .navbar-nav .nav-link {
-  color: whitesmoke;
+  color: white;
+  font-size: 19px;
 }
 
 .navbar-toggler {
-  padding: .25rem .75rem;
+  padding: .25rem 0;
   border: 0;
 }
 
@@ -183,6 +199,17 @@ a {
           transform: none;
 }
 
+.main {
+  background: #f7f7f7;
+}
+
+.main .container {
+  background-color: white;
+  font-size: 14px;
+  line-height: 26px;
+  color: #51545f;
+}
+
 .footer {
   background-color: #121526;
   color: whitesmoke;
@@ -190,8 +217,18 @@ a {
 
 .footer__heading {
   line-height: 24px;
-  text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.footer__p {
+  font-size: 14px;
+  line-height: 26px;
+  color: #b5aec4;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 20px;
 }
 
 .footer__list,
@@ -213,13 +250,28 @@ a {
   color: #A3A5AD;
 }
 
-.footer__list-item a,
-.footer__list-item a:hover,
-.footer__list-item a:focus {
-  color: white;
+.footer__list-item,
+.footer__list-item a {
+  font-size: 14px;
+  line-height: 26px;
+  color: #b5aec4;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
 }
 
-.footer__link path {
+.footer__list-item--green,
+.footer__list-item a--green {
+  color: #2bc0a4 !important;
+}
+
+.footer__list-item a:hover,
+.footer__list-item a:focus {
+  color: #2bc0a4;
+  text-decoration: none;
+}
+
+.footer__list-item a:hover,
+.footer__list-item a:focus .footer__link path {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -230,11 +282,15 @@ a {
 
 .footer__copyright {
   background-color: #03081C;
+  color: #51545f;
 }
 
 @media (max-width: 992px) {
   .navbar {
     background-color: black;
+    padding: 0 1rem;
+    height: 60px;
+    border-bottom: none;
   }
   .navbar-collapse {
     position: absolute;
