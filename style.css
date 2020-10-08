@@ -221,7 +221,6 @@ p {
 
 .hero__background {
   height: 700px;
-  max-height: calc(100vh - 80px);
   -o-object-fit: cover;
      object-fit: cover;
 }
