@@ -364,4 +364,15 @@ $lightGreen:#2bc0a4;
     .navbar-brand .img-fluid {
         max-height: 40px;
     }
+
+
+    .hero {
+        margin-top: 0;
+        height: 700px;
+        max-height: calc(100vh - 60px);
+
+        &__background {
+            max-height: calc(100vh - 40px);
+        }
+    }
 }
