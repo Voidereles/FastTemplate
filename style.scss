@@ -243,6 +243,15 @@ $lightGreen:#2bc0a4;
     &__subheading {
         font-size: 3vmin;
     }
+
+    &__chevron-down {
+        font-size: 2rem;
+        position: absolute;
+        bottom: 10%;
+        left: calc(50% - 16px);
+        width: 32px;
+        animation: 3.5s 1.5s arrow infinite;
+    }
 }
 
 
@@ -373,5 +382,28 @@ $lightGreen:#2bc0a4;
         &__background {
             max-height: calc(100vh - 40px);
         }
+    }
+}
+
+
+@keyframes arrow {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
     }
 }

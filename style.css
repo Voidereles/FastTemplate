@@ -242,6 +242,16 @@ p {
   font-size: 3vmin;
 }
 
+.hero__chevron-down {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 10%;
+  left: calc(50% - 16px);
+  width: 32px;
+  -webkit-animation: 3.5s 1.5s arrow infinite;
+          animation: 3.5s 1.5s arrow infinite;
+}
+
 .main {
   background: #f7f7f7;
 }
@@ -357,6 +367,52 @@ p {
   }
   .hero__background {
     max-height: calc(100vh - 40px);
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
