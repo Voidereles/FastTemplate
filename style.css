@@ -39,10 +39,6 @@ p {
 .header {
   position: relative;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .header::before {
@@ -55,35 +51,49 @@ p {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.header__intro-container {
-  position: relative;
-  padding: 8rem 1rem;
-  color: white;
-}
-
 .navbar {
   height: 80px;
   padding: 0px 75px;
+  z-index: 5;
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .navbar-brand {
-  color: whitesmoke;
+  color: white;
+  font-family: 'Berkshire Swash', cursive !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .navbar-brand .img-fluid {
+  height: 50px;
   max-height: 50px;
   max-width: 100%;
 }
 
 .navbar-brand:focus, .navbar-brand:hover {
-  color: whitesmoke;
+  color: #EFE3C3;
+}
+
+.navbar-brand:hover {
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
+}
+
+.navbar-nav li a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .navbar-nav li:hover a,
 .navbar-nav li.active a {
-  color: #2bc0a4;
+  color: #EFE3C3;
+}
+
+.navbar-nav li:hover a {
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
 }
 
 .navbar-nav .nav-item:not(:last-of-type) {
@@ -197,6 +207,40 @@ p {
   top: 75%;
   -webkit-transform: none;
           transform: none;
+}
+
+.hero {
+  height: 700px;
+  margin-top: -80px;
+}
+
+.hero .owl-carousel {
+  position: absolute;
+  z-index: -1;
+}
+
+.hero__background {
+  height: 700px;
+  max-height: calc(100vh - 80px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero__heading, .hero__subheading {
+  font-family: 'Berkshire Swash', cursive !important;
+  font-weight: 400;
+  color: #EFE3C3;
+  position: relative;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 6vmin;
+}
+
+.hero__subheading {
+  font-size: 3vmin;
 }
 
 .main {

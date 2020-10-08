@@ -9,12 +9,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fast template</title>
+    <title>Muzykanci z Gruzji</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="georgia-flag.svg" type="image/x-icon" />
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+
+
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,7 +37,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg mr-md-auto">
             <a class="navbar-brand" href="#">
-                <img class="img-fluid py-lg-1" src="ikea-logo.jpg" alt="logo">
+                <img class="img-fluid py-lg-1 mr-3" src="georgia-flag.svg" alt="logo">Muzykanci z Gruzji
             </a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                 data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
@@ -43,24 +52,14 @@
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tibia Coins</a>
+                        <a class="nav-link" href="#">Recruit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Premium Time</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Extra Services</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Login</a>
                     </li>
 
 
@@ -71,9 +70,16 @@
                 </form> -->
             </div>
         </nav>
-        <div class="container header__intro-container text-center">
-
-            <h1>Random text</h1>
+        <div class="hero text-center">
+            <div class="owl-carousel hero__carousel">
+                <img class="hero__background" src="images/icecrown.jpg" alt="icecrown">
+                <img class="hero__background" src="images/maldraxus.jpg" alt="maldraxus">
+                <img class="hero__background" src="images/bastion.jpg" alt="bastion">
+                <img class="hero__background" src="images/revendreth.jpg" alt="revendreth">
+                <img class="hero__background" src="images/ardenweld.jpg" alt="ardenweld">
+            </div>
+            <h1 class="hero__heading">Muzykanci z Gruzji</h1>
+            <h2 class="hero__subheading">Probably the best crew you could find to talk and play together.</h2>
         </div>
     </header>
     <main class="main py-5" role="main" class="container">
@@ -197,6 +203,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script src="script.js" async defer></script>
 </body>
