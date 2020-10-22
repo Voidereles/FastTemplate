@@ -18,9 +18,9 @@ a {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
-    color: #51545f;
+    color: $petrifiedOak;
 }
 
 
@@ -31,6 +31,10 @@ h3 {
     font-weight: 400;
     color: $lightBrown;
     text-shadow: 2px 0px 4px $blackCat;
+}
+
+body {
+    background: #181818;
 }
 
 * {
@@ -45,6 +49,7 @@ h3 {
 .header {
     position: relative;
     width: 100%;
+
 
     &::before {
         content: '';
@@ -64,7 +69,15 @@ h3 {
     height: 80px;
     padding: 0px 75px;
     z-index: 5;
-    background-color: transparent;
+    background: rgb(48, 48, 48);
+    background: linear-gradient(180deg, rgba(30, 30, 30, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
 
     &-brand {
         color: $lightBrown;
@@ -216,7 +229,6 @@ h3 {
 
 .hero {
     height: 100vh;
-    margin-top: -80px;
 
     .owl-carousel {
         position: absolute;
@@ -263,7 +275,7 @@ h3 {
         // background-color: white;
         font-size: 14px;
         line-height: 26px;
-        color: #51545f;
+        color: $petrifiedOak;
     }
 }
 
@@ -377,6 +389,139 @@ h3 {
 
 }
 
+.about,
+.recruit {
+    padding-top: 150px;
+
+    &__intro {
+        color: $petrifiedOak;
+        text-align: justify;
+        font-size: initial;
+    }
+
+    &__note {
+        opacity: 0.5;
+        max-height: 40vh;
+    }
+
+    &__item {
+        transition: 0.3s;
+        color: $lightBrown;
+        padding-bottom: 100px;
+
+        &-heading {
+            font-weight: 600;
+            font-size: $font-size-big;
+        }
+
+        &-description {
+            transition: 0.3s;
+            color: $lightBrown;
+            text-align: justify;
+        }
+
+        &-date {
+            border-right: 2px solid $desaturatedOrange;
+            font-size: $font-size-big;
+        }
+
+
+    }
+}
+
+.recruit {
+    &__subheading {
+        color: $desaturatedOrange;
+        font-size: 1.25rem;
+        font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        text-shadow: none;
+    }
+
+    &__intro {
+        color: $lightBrown;
+    }
+
+    &__form-label {
+        font-size: 0.75rem;
+        line-height: 1;
+        margin-bottom: 0.25rem;
+        margin-top: 3.5rem;
+    }
+
+    &__form-input,
+    &__form-textarea {
+        outline: none;
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid $lightBrown;
+        background: transparent;
+        display: block;
+        color: white;
+        width: 100%;
+        max-width: 100%;
+
+        &:hover,
+        &:focus {
+            background: lighten($color: $thamarBlack, $amount: 1%);
+        }
+    }
+
+    &__form-textarea {
+        background: lighten($color: $thamarBlack, $amount: 1%);
+        height: 100%;
+        padding: 1rem;
+    }
+
+    &__form-submit {
+        background: $lightBrown;
+        color: $thamarBlack;
+        border: none;
+        padding: 0.5rem 3rem;
+        font-size: initial;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+}
+
+.calendar {
+    padding-top: 200px;
+}
+
+.eventsMaker {
+    .select2-container {
+        display: block;
+        width: 100% !important;
+    }
+
+    .select2-container--default .select2-selection--single {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $lightBrown;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .select2-selection__rendered:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .select2-dropdown,
+    span.select2-dropdown.select2-dropdown--below {
+        background: $thamarBlack;
+
+    }
+
+
+}
+
 .footer {
     background-color: #181818;
     text-align: center;
@@ -388,7 +533,6 @@ h3 {
     &__copyright {
         border-top: 1px solid $petrifiedOak;
     }
-
 }
 
 @media (max-width:992px) {

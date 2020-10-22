@@ -35,3 +35,28 @@ $('.gallery__carousel').owlCarousel({
         }
     }
 });
+
+
+
+function headerOnScroll() {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        if (this.window.pageYOffset > 105) {
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("fixedNavbar").style.top = "0";
+            } else {
+                document.getElementById("fixedNavbar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    };
+}
+
+headerOnScroll();
+
+$(document).ready(function () {
+    $('.js-eventType').select2();
+    $('.js-additionalSelect').select2();
+
+});
