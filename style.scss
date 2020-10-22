@@ -508,6 +508,10 @@ body {
         width: 100%;
     }
 
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: white;
+    }
+
     .select2-selection__rendered:focus {
         box-shadow: none;
         outline: none;
