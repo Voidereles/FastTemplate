@@ -1,11 +1,13 @@
-$lightBrown: #EFE3C3;
-$petrifiedOak:#a78a6e;
-$desaturatedOrange:#89785C;
-$blackCat:#303030;
-$thamarBlack:#181818;
-$oliveCourt:#606048;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap');
+@import url('bootstrap/dist/css/bootstrap.min.css');
+
 $moderateBlue:#4268BD;
 $discordColor:#7289DA;
+
+
+$greyIsabeline: #EFE9E7;
+$goldSunray:#dea64a;
+$blackSpace:#2F2E41;
 
 $font-size-large:1.5rem;
 $font-size-big:1.2rem;
@@ -20,58 +22,56 @@ a {
 p {
     font-size: 16px;
     line-height: 26px;
-    color: $petrifiedOak;
+    color: $goldSunray;
 }
 
 
 h1,
 h2,
 h3 {
-    font-family: 'Berkshire Swash', cursive !important;
-    font-weight: 400;
-    color: $lightBrown;
-    text-shadow: 2px 0px 4px $blackCat;
+    color: $blackSpace;
+    font-weight: 800;
 }
 
 body {
-    background: #181818;
+    background: $greyIsabeline;
 }
 
 * {
-    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-family: 'Poppins', 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 
     &::selection {
         background: $moderateBlue;
     }
 }
 
+.container-fluid {
+    max-width: 1700px;
+}
+
+.color-gold {
+    color: $goldSunray;
+
+
+}
+
+a.color-gold {
+
+    &:hover,
+    &:focus {
+        color: $goldSunray;
+    }
+}
 
 .header {
     position: relative;
     width: 100%;
-
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-
-
 }
 
 .navbar {
     height: 80px;
     padding: 0px 75px;
     z-index: 5;
-    background: rgb(48, 48, 48);
-    background: linear-gradient(180deg, rgba(30, 30, 30, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    backdrop-filter: blur(2px);
     position: fixed;
     width: 100%;
     z-index: 3;
@@ -80,10 +80,9 @@ body {
     left: 0;
 
     &-brand {
-        color: $lightBrown;
-        font-family: 'Berkshire Swash', cursive !important;
+        color: $blackSpace;
+        font-weight: 800;
         transition: 0.2s;
-        text-shadow: 2px 0px 4px $blackCat;
 
         .img-fluid {
             height: 50px;
@@ -93,7 +92,7 @@ body {
 
         &:focus,
         &:hover {
-            color: $lightBrown;
+            color: $goldSunray;
         }
     }
 
@@ -103,7 +102,7 @@ body {
 
     &-nav li:hover a,
     &-nav li.active a {
-        color: $lightBrown;
+        color: $goldSunray;
     }
 
 
@@ -117,10 +116,8 @@ body {
     }
 
     &-nav .nav-link {
-        color: $lightBrown;
+        color: $blackSpace;
         font-size: 19px;
-
-        text-shadow: 2px 0px 4px $blackCat;
     }
 
 
@@ -155,7 +152,7 @@ body {
             position: absolute;
             height: calc(25% - 0.3rem);
             width: 100%;
-            background-color: whitesmoke;
+            background-color: $blackSpace;
             border-radius: 1px;
             opacity: 1;
             left: 0;
@@ -200,7 +197,7 @@ body {
             position: absolute;
             height: calc(25% - 0.3rem);
             width: 100%;
-            background-color: whitesmoke;
+            background-color: $blackSpace;
             border-radius: 1px;
             opacity: 1;
             left: 0;
@@ -227,13 +224,22 @@ body {
 }
 
 
-.hero {
-    height: 100vh;
 
-    .owl-carousel {
-        position: absolute;
-        z-index: -1;
+.main {
+    background: $blackSpace;
+
+    .container {
+        // background-color: white;
+        font-size: 14px;
+        line-height: 26px;
+        color: $goldSunray;
     }
+}
+
+
+.hero {
+    margin-top: 80px;
+    background: $greyIsabeline;
 
     &__background {
         height: 100vh;
@@ -242,78 +248,55 @@ body {
 
     &__heading,
     &__subheading {
-        font-family: 'Berkshire Swash', cursive !important;
-        font-weight: 400;
-        color: $lightBrown;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: 0.45px;
+        color: $goldSunray;
         position: relative;
         z-index: 0;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-size: 6vmin;
     }
 
     &__subheading {
         font-size: 3vmin;
+        color: $blackSpace;
     }
 
-    &__chevron-down {
-        font-size: 2rem;
-        position: absolute;
-        bottom: 10%;
-        left: calc(50% - 16px);
-        width: 32px;
-        animation: 3.5s 1.5s arrow infinite;
+    &__input {
+        &:focus {
+            border-color: lighten($color: $goldSunray, $amount: 20%);
+            box-shadow: 0 0 0 0.2rem rgba(222, 166, 74, .25);
+
+        }
     }
-}
 
-
-.main {
-    background: $thamarBlack;
-
-    .container {
-        // background-color: white;
-        font-size: 14px;
-        line-height: 26px;
-        color: $petrifiedOak;
+    &__submit {
+        background-color: $goldSunray;
+        border-color: $goldSunray;
     }
 }
+
 
 .features {
-    background: $thamarBlack;
+    background: $blackSpace;
     position: relative;
-    color: $petrifiedOak;
+    color: $goldSunray;
     min-height: 500px;
 
     &__text {
-        color: $petrifiedOak;
+        color: $goldSunray;
     }
 
     &__item {
-        padding: 0 2rem;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .lute {
-        height: 446px;
-        opacity: 0.5;
-        transform: translateY(-80px) translateX(-20px);
-
-        // overflow: visible;
-        // position: relative;
-
-        // &.svg:not(:root) {}
-
-        // &-frame {
-        //     transition: 1s;
-        //     position: absolute;
-        //     transform: translate(20px, 10px);
-        // }
-
-        // &-string {
-        //     transition: 1s;
-        //     position: absolute;
-        //     transform: translate(20px, -40px);
-        // }
+    &__heading {
+        color: $goldSunray;
+        font-weight: 800;
     }
 
     &__subheading {
@@ -321,60 +304,114 @@ body {
         max-width: 700px;
         margin: auto;
         text-align: center;
-        color: $petrifiedOak;
+        color: $goldSunray;
     }
+
 
     &__check-mark {
-        opacity: 0.9;
+        height: 3rem;
         max-width: 3rem;
     }
-}
 
-.gallery {
-    &__container {
-        max-width: 1600px;
-    }
-
-    &__subheading {
-        color: $petrifiedOak;
-        font-style: italic;
-    }
-
-    &__img {
-        object-fit: cover;
-        height: 400px;
-        max-height: 50vh;
+    &__text {
+        font-weight: 500;
+        margin-bottom: 0;
     }
 }
+
+.pricing {
+    .block {
+
+        display: block;
+        padding: 50px;
+        background-color: darken($color: $blackSpace, $amount: 10%);
+        border-radius: 6px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+
+    &__heading {
+        color: $greyIsabeline;
+    }
+
+    .option {
+        // float: left;
+        // width: 50%;
+        font-size: 1rem;
+        letter-spacing: -.5px;
+        // background-color: #f9f9f9;
+        // padding: 10px 15px;
+        // box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        background-color: darken($color: $blackSpace, $amount: 5%);
+        padding: 0.45rem 1.5rem;
+        color: $greyIsabeline;
+        opacity: 0.8;
+        // flex: 2 0 25%;
+
+        // &:nth-child(even) {
+        //     background: $greyIsabeline;
+        // }
+
+
+
+        &-name {
+            // float: left;
+            // width: 65%;
+        }
+
+        &-price {
+            // float: right;
+            // width: 35%;
+            // text-align: right;
+            // font-weight: 600;
+
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: $blackSpace;
+
+        &--double {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
 
 .contact {
     padding-top: 10rem;
 
     &__subheading {
-        color: $petrifiedOak;
+        color: $goldSunray;
         font-style: italic;
     }
 
     &__discord-link {
-        background: $desaturatedOrange;
-        border: $desaturatedOrange;
-        outline: $desaturatedOrange;
+        background: $goldSunray;
+        border: $goldSunray;
+        outline: $goldSunray;
         transition: 0.3s;
         letter-spacing: 0.5px;
 
         &:hover,
         &:active {
-            border: $desaturatedOrange;
-            outline: $desaturatedOrange;
+            border: $goldSunray;
+            outline: $goldSunray;
             background: $discordColor;
             box-shadow: none;
         }
 
         &:focus {
-            background: $desaturatedOrange;
-            border: $desaturatedOrange;
-            outline: $desaturatedOrange;
-            background: $desaturatedOrange;
+            background: $goldSunray;
+            border: $goldSunray;
+            outline: $goldSunray;
+            background: $goldSunray;
             box-shadow: none;
         }
 
@@ -394,7 +431,7 @@ body {
     padding-top: 150px;
 
     &__intro {
-        color: $petrifiedOak;
+        color: $goldSunray;
         text-align: justify;
         font-size: initial;
     }
@@ -406,7 +443,7 @@ body {
 
     &__item {
         transition: 0.3s;
-        color: $lightBrown;
+        color: $goldSunray;
         padding-bottom: 100px;
 
         &-heading {
@@ -416,12 +453,12 @@ body {
 
         &-description {
             transition: 0.3s;
-            color: $lightBrown;
+            color: $goldSunray;
             text-align: justify;
         }
 
         &-date {
-            border-right: 2px solid $desaturatedOrange;
+            border-right: 2px solid $goldSunray;
             font-size: $font-size-big;
         }
 
@@ -431,14 +468,14 @@ body {
 
 .recruit {
     &__subheading {
-        color: $desaturatedOrange;
+        color: $goldSunray;
         font-size: 1.25rem;
         font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
         text-shadow: none;
     }
 
     &__intro {
-        color: $lightBrown;
+        color: $goldSunray;
     }
 
     &__form-label {
@@ -453,7 +490,7 @@ body {
         outline: none;
         box-shadow: none;
         border: none;
-        border-bottom: 1px solid $lightBrown;
+        border-bottom: 1px solid $goldSunray;
         background: transparent;
         display: block;
         color: white;
@@ -462,19 +499,19 @@ body {
 
         &:hover,
         &:focus {
-            background: lighten($color: $thamarBlack, $amount: 1%);
+            background: lighten($color: $blackSpace, $amount: 1%);
         }
     }
 
     &__form-textarea {
-        background: lighten($color: $thamarBlack, $amount: 1%);
+        background: lighten($color: $blackSpace, $amount: 1%);
         height: 100%;
         padding: 1rem;
     }
 
     &__form-submit {
-        background: $lightBrown;
-        color: $thamarBlack;
+        background: $goldSunray;
+        color: $blackSpace;
         border: none;
         padding: 0.5rem 3rem;
         font-size: initial;
@@ -503,7 +540,7 @@ body {
     .select2-container--default .select2-selection--single {
         background: transparent;
         border: none;
-        border-bottom: 1px solid $lightBrown;
+        border-bottom: 1px solid $goldSunray;
         border-radius: 0;
         width: 100%;
     }
@@ -519,7 +556,7 @@ body {
 
     .select2-dropdown,
     span.select2-dropdown.select2-dropdown--below {
-        background: $thamarBlack;
+        background: $blackSpace;
 
     }
 
@@ -527,28 +564,35 @@ body {
 }
 
 .footer {
-    background-color: #181818;
-    text-align: center;
-    color: $petrifiedOak;
-    font-size: 0.75rem;
-    padding-top: 30vh;
+    background-color: $blackSpace;
+    text-align: justify;
+    color: $greyIsabeline;
+    padding-top: 3rem;
     margin-top: -1px;
 
     &__copyright {
-        border-top: 1px solid $petrifiedOak;
+        border-top: 1px solid $goldSunray;
+        text-align: center;
+    }
+
+    &__link {
+        color: $greyIsabeline;
+        transition: 0.2s;
+        line-height: 1.7;
+
+        &:hover {
+            color: $goldSunray;
+            text-decoration: none;
+        }
     }
 }
 
 @media (max-width:992px) {
 
-    .header {
-        &::before {
-            background: rgba(0, 0, 0, 0.8);
-        }
-    }
+
 
     .navbar {
-        background-color: black;
+        background-color: $greyIsabeline;
         padding: 0 1rem;
         height: 60px;
         border-bottom: none;
@@ -560,7 +604,8 @@ body {
             left: 0;
             z-index: 1;
             padding: 1rem;
-            background-color: black;
+            background-color: $greyIsabeline;
+            box-shadow: 0px 9px 11px 1px rgba(0, 0, 0, 0.1);
         }
     }
 
@@ -572,14 +617,66 @@ body {
         max-height: 40px;
     }
 
-
     .hero {
-        margin-top: 0;
-        height: calc(100vh - 60px);
+        padding-bottom: 3rem;
 
-        &__background {
-            height: calc(100vh - 40px);
+        svg {
+            height: 50%;
         }
+    }
+
+    .pricing {
+        .block {
+            padding: 1rem 0.5rem;
+        }
+
+        .color-gold {
+            text-align: right;
+            margin-left: 5rem;
+        }
+
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+
+            .option:nth-child(8n+2),
+            .option:nth-child(8n+4),
+            .option:nth-child(8n+5),
+            .option:nth-child(8n+7) {
+                background-color: darken($color: $blackSpace, $amount: 5%);
+            }
+
+            .option:nth-child(4n+2),
+            .option:nth-child(4n-1) {
+
+                background-color: darken($color: $blackSpace, $amount: 8%);
+            }
+
+            &--double {
+                grid-template-columns: 1fr;
+
+                .option:nth-child(8n+2),
+                .option:nth-child(8n+4),
+                .option:nth-child(8n+5),
+                .option:nth-child(8n+7) {
+                    background-color: darken($color: $blackSpace, $amount: 5%);
+                }
+
+                .option:nth-child(4n+2),
+                .option:nth-child(4n-1) {
+                    background-color: darken($color: $blackSpace, $amount: 5%);
+                }
+
+                .option:nth-child(even) {
+
+                    background-color: darken($color: $blackSpace, $amount: 8%);
+                }
+
+            }
+        }
+
+        // .option:nth-child(even) {
+        //     background-color: darken($color: $blackSpace, $amount: 8%);
+        // }
     }
 
     .features {
@@ -589,6 +686,37 @@ body {
     }
 }
 
+@media (min-width:992px) {
+
+
+    .pricing__grid {
+
+        .option:nth-child(8n+2),
+        .option:nth-child(8n+4),
+        .option:nth-child(8n+5),
+        .option:nth-child(8n+7) {
+            background-color: darken($color: $blackSpace, $amount: 8%);
+        }
+    }
+
+    .pricing__grid--double {
+
+        .option:nth-child(8n+2),
+        .option:nth-child(8n+4),
+        .option:nth-child(8n+5),
+        .option:nth-child(8n+7) {
+            background-color: darken($color: $blackSpace, $amount: 5%);
+        }
+
+        .option:nth-child(4n+2),
+        .option:nth-child(4n-1) {
+
+            background-color: darken($color: $blackSpace, $amount: 8%);
+        }
+    }
+
+
+}
 
 @keyframes arrow {
     0% {
