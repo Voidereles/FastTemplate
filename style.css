@@ -1,18 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap");
 @import url("bootstrap/dist/css/bootstrap.min.css");
-button,
-input,
-textarea,
-a {
-  border-radius: 0 !important;
-}
-
-p {
-  font-size: 16px;
-  line-height: 26px;
-  color: #dea64a;
-}
-
+@import url("ion-rangeslider/css/ion.rangeSlider.min.css");
 h1,
 h2,
 h3 {
@@ -38,6 +26,21 @@ body {
 
 .container-fluid {
   max-width: 1700px;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+}
+
+.form-control:focus {
+  border-color: #eed0a0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(222, 166, 74, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(222, 166, 74, 0.25);
+}
+
+.btn-warning {
+  background-color: #dea64a;
+  border-color: #dea64a;
 }
 
 .color-gold {
@@ -83,17 +86,17 @@ a.color-gold:hover, a.color-gold:focus {
   color: #dea64a;
 }
 
-.navbar-nav li a {
+.navbar-nav li .nav-link {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.navbar-nav li:hover a,
-.navbar-nav li.active a {
+.navbar-nav li:hover .nav-link,
+.navbar-nav li.active .nav-link {
   color: #dea64a;
 }
 
-.navbar-nav li:hover a {
+.navbar-nav li:hover .nav-link {
   -webkit-transform: translateY(-0.25rem);
           transform: translateY(-0.25rem);
 }
@@ -105,6 +108,11 @@ a.color-gold:hover, a.color-gold:focus {
 .navbar-nav .nav-link {
   color: #2F2E41;
   font-size: 19px;
+}
+
+.navbar-nav .nav-link:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .navbar-toggler {
@@ -213,16 +221,11 @@ a.color-gold:hover, a.color-gold:focus {
 
 .main {
   background: #2F2E41;
-}
-
-.main .container {
-  font-size: 14px;
-  line-height: 26px;
-  color: #dea64a;
+  margin-top: 80px;
+  min-height: calc(100vh - 250px);
 }
 
 .hero {
-  margin-top: 80px;
   background: #EFE9E7;
 }
 
@@ -253,11 +256,6 @@ a.color-gold:hover, a.color-gold:focus {
           box-shadow: 0 0 0 0.2rem rgba(222, 166, 74, 0.25);
 }
 
-.hero__submit {
-  background-color: #dea64a;
-  border-color: #dea64a;
-}
-
 .features {
   background: #2F2E41;
   position: relative;
@@ -274,9 +272,6 @@ a.color-gold:hover, a.color-gold:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -394,143 +389,55 @@ a.color-gold:hover, a.color-gold:focus {
           transform: scale(1);
 }
 
-.about,
-.recruit {
-  padding-top: 150px;
-}
-
-.about__intro,
-.recruit__intro {
-  color: #dea64a;
-  text-align: justify;
-  font-size: initial;
-}
-
-.about__note,
-.recruit__note {
-  opacity: 0.5;
-  max-height: 40vh;
-}
-
-.about__item,
-.recruit__item {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: #dea64a;
-  padding-bottom: 100px;
-}
-
-.about__item-heading,
-.recruit__item-heading {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.about__item-description,
-.recruit__item-description {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: #dea64a;
-  text-align: justify;
-}
-
-.about__item-date,
-.recruit__item-date {
-  border-right: 2px solid #dea64a;
-  font-size: 1.2rem;
-}
-
-.recruit__subheading {
-  color: #dea64a;
-  font-size: 1.25rem;
-  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-  text-shadow: none;
-}
-
-.recruit__intro {
-  color: #dea64a;
-}
-
-.recruit__form-label {
-  font-size: 0.75rem;
-  line-height: 1;
-  margin-bottom: 0.25rem;
-  margin-top: 3.5rem;
-}
-
-.recruit__form-input, .recruit__form-textarea {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
-  border-bottom: 1px solid #dea64a;
-  background: transparent;
-  display: block;
-  color: white;
-  width: 100%;
-  max-width: 100%;
-}
-
-.recruit__form-input:hover, .recruit__form-input:focus, .recruit__form-textarea:hover, .recruit__form-textarea:focus {
-  background: #313044;
-}
-
-.recruit__form-textarea {
-  background: #313044;
-  height: 100%;
-  padding: 1rem;
-}
-
-.recruit__form-submit {
-  background: #dea64a;
+.contact-form {
   color: #2F2E41;
-  border: none;
-  padding: 0.5rem 3rem;
-  font-size: initial;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  background-color: #EFE9E7;
+  border-radius: 6px;
 }
 
-.recruit__form-submit:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.recruit__form-submit:active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.steps__step {
+  font-size: 1.5rem;
+  border-bottom: 12px solid grey;
+  color: grey;
+  width: 50%;
+  padding: 0.5rem 0;
 }
 
-.calendar {
-  padding-top: 200px;
+.steps__step.active {
+  border-color: #dea64a;
+  color: #dea64a;
 }
 
-.eventsMaker .select2-container {
-  display: block;
-  width: 100% !important;
-}
-
-.eventsMaker .select2-container--default .select2-selection--single {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #dea64a;
-  border-radius: 0;
-  width: 100%;
-}
-
-.eventsMaker .select2-container--default .select2-selection--single .select2-selection__rendered {
+.products-choice .nav-pills .nav-link.active,
+.products-choice .nav-pills .show > .nav-link {
+  background-color: #dea64a;
   color: white;
 }
 
-.eventsMaker .select2-selection__rendered:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
+.products-choice .nav-pills .nav-link {
+  color: #dea64a;
 }
 
-.eventsMaker .select2-dropdown,
-.eventsMaker span.select2-dropdown.select2-dropdown--below {
-  background: #2F2E41;
+.products-choice .tab-pane {
+  text-align: center;
+  color: #2F2E41;
+  font-size: 1.5rem;
+}
+
+.products-choice__heroName {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.products-choice__heroAdditional {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .footer {
@@ -585,8 +492,11 @@ a.color-gold:hover, a.color-gold:focus {
   .hero {
     padding-bottom: 3rem;
   }
+  .hero__img-container {
+    max-height: 200px;
+  }
   .hero svg {
-    height: 50%;
+    height: 75%;
   }
   .pricing .block {
     padding: 1rem 0.5rem;

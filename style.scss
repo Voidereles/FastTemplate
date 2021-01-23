@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap');
 @import url('bootstrap/dist/css/bootstrap.min.css');
+@import url('ion-rangeslider/css/ion.rangeSlider.min.css');
 
 $moderateBlue:#4268BD;
 $discordColor:#7289DA;
@@ -12,18 +13,6 @@ $blackSpace:#2F2E41;
 $font-size-large:1.5rem;
 $font-size-big:1.2rem;
 
-button,
-input,
-textarea,
-a {
-    border-radius: 0 !important;
-}
-
-p {
-    font-size: 16px;
-    line-height: 26px;
-    color: $goldSunray;
-}
 
 
 h1,
@@ -47,6 +36,21 @@ body {
 
 .container-fluid {
     max-width: 1700px;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+
+    &:focus {
+        border-color: lighten($color: $goldSunray, $amount: 20%);
+        box-shadow: 0 0 0 0.2rem rgba(222, 166, 74, .25);
+    }
+}
+
+
+.btn-warning {
+    background-color: $goldSunray;
+    border-color: $goldSunray;
 }
 
 .color-gold {
@@ -96,17 +100,17 @@ a.color-gold {
         }
     }
 
-    &-nav li a {
+    &-nav li .nav-link {
         transition: 0.2s;
     }
 
-    &-nav li:hover a,
-    &-nav li.active a {
+    &-nav li:hover .nav-link,
+    &-nav li.active .nav-link {
         color: $goldSunray;
     }
 
 
-    &-nav li:hover a {
+    &-nav li:hover .nav-link {
         transform: translateY(-0.25rem);
     }
 
@@ -118,6 +122,11 @@ a.color-gold {
     &-nav .nav-link {
         color: $blackSpace;
         font-size: 19px;
+
+
+        &:focus {
+            box-shadow: none;
+        }
     }
 
 
@@ -227,18 +236,13 @@ a.color-gold {
 
 .main {
     background: $blackSpace;
+    margin-top: 80px;
+    min-height: calc(100vh - 250px);
 
-    .container {
-        // background-color: white;
-        font-size: 14px;
-        line-height: 26px;
-        color: $goldSunray;
-    }
 }
 
 
 .hero {
-    margin-top: 80px;
     background: $greyIsabeline;
 
     &__background {
@@ -266,14 +270,9 @@ a.color-gold {
         &:focus {
             border-color: lighten($color: $goldSunray, $amount: 20%);
             box-shadow: 0 0 0 0.2rem rgba(222, 166, 74, .25);
-
         }
     }
 
-    &__submit {
-        background-color: $goldSunray;
-        border-color: $goldSunray;
-    }
 }
 
 
@@ -290,7 +289,6 @@ a.color-gold {
     &__item {
         padding: 0 1rem;
         display: flex;
-        justify-content: center;
         align-items: center;
     }
 
@@ -426,141 +424,56 @@ a.color-gold {
 
 }
 
-.about,
-.recruit {
-    padding-top: 150px;
+.contact-form {
+    color: $blackSpace;
+    background-color: $greyIsabeline;
+    border-radius: 6px;
+}
 
-    &__intro {
-        color: $goldSunray;
-        text-align: justify;
-        font-size: initial;
-    }
+.steps {
+    display: flex;
 
-    &__note {
-        opacity: 0.5;
-        max-height: 40vh;
-    }
+    &__step {
+        font-size: 1.5rem;
+        border-bottom: 12px solid grey;
+        color: grey;
+        width: 50%;
+        padding: 0.5rem 0;
 
-    &__item {
-        transition: 0.3s;
-        color: $goldSunray;
-        padding-bottom: 100px;
-
-        &-heading {
-            font-weight: 600;
-            font-size: $font-size-big;
-        }
-
-        &-description {
-            transition: 0.3s;
+        &.active {
+            border-color: $goldSunray;
             color: $goldSunray;
-            text-align: justify;
         }
-
-        &-date {
-            border-right: 2px solid $goldSunray;
-            font-size: $font-size-big;
-        }
-
-
     }
 }
 
-.recruit {
-    &__subheading {
-        color: $goldSunray;
-        font-size: 1.25rem;
-        font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-        text-shadow: none;
-    }
+.products-choice {
 
-    &__intro {
-        color: $goldSunray;
-    }
-
-    &__form-label {
-        font-size: 0.75rem;
-        line-height: 1;
-        margin-bottom: 0.25rem;
-        margin-top: 3.5rem;
-    }
-
-    &__form-input,
-    &__form-textarea {
-        outline: none;
-        box-shadow: none;
-        border: none;
-        border-bottom: 1px solid $goldSunray;
-        background: transparent;
-        display: block;
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        background-color: $goldSunray;
         color: white;
-        width: 100%;
-        max-width: 100%;
-
-        &:hover,
-        &:focus {
-            background: lighten($color: $blackSpace, $amount: 1%);
-        }
     }
 
-    &__form-textarea {
-        background: lighten($color: $blackSpace, $amount: 1%);
-        height: 100%;
-        padding: 1rem;
+    .nav-pills .nav-link {
+        color: $goldSunray;
     }
 
-    &__form-submit {
-        background: $goldSunray;
+    .tab-pane {
+        text-align: center;
         color: $blackSpace;
-        border: none;
-        padding: 0.5rem 3rem;
-        font-size: initial;
-        transition: 0.3s;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-
-        &:active {
-            transform: scale(1);
-        }
-    }
-}
-
-.calendar {
-    padding-top: 200px;
-}
-
-.eventsMaker {
-    .select2-container {
-        display: block;
-        width: 100% !important;
+        font-size: 1.5rem;
     }
 
-    .select2-container--default .select2-selection--single {
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid $goldSunray;
-        border-radius: 0;
-        width: 100%;
+    &__heroName {
+        font-size: 2rem;
+        font-weight: bold;
     }
 
-    .select2-container--default .select2-selection--single .select2-selection__rendered {
-        color: white;
+    &__heroAdditional {
+        font-size: 1rem;
+        font-weight: bold;
     }
-
-    .select2-selection__rendered:focus {
-        box-shadow: none;
-        outline: none;
-    }
-
-    .select2-dropdown,
-    span.select2-dropdown.select2-dropdown--below {
-        background: $blackSpace;
-
-    }
-
-
 }
 
 .footer {
@@ -620,8 +533,12 @@ a.color-gold {
     .hero {
         padding-bottom: 3rem;
 
+        &__img-container {
+            max-height: 200px;
+        }
+
         svg {
-            height: 50%;
+            height: 75%;
         }
     }
 

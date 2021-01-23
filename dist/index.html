@@ -88,10 +88,11 @@
                             <a class="nav-link" href="#">Kontakt</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Zaloguj się</a>
+                            <button class="btn btn-link nav-link" data-toggle="modal" data-target="#loginModal">Zaloguj
+                                się</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Rejestracja</a>
+                            <button class="btn btn-link nav-link" data-toggle="modal" data-target="#registerModal">Rejestracja</button>
                         </li>
 
 
@@ -106,7 +107,7 @@
         <section class="hero text-center">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+                    <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center hero__img-container">
                         <svg id="a5c16198-98a1-478b-8909-43624583dcf2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="793" height="551.73152" viewBox="0 0 793 551.73152">
                             <ellipse cx="158" cy="539.73152" rx="158" ry="12" fill="#e6e6e6"></ellipse>
                             <path d="M324.27227,296.55377c27.49676-11.6953,61.74442-4.28528,95.19092.85757.31124-6.228,4.08385-13.80782.132-18.15284-4.80115-5.2788-4.35917-10.82529-1.47008-16.40375,7.38788-14.265-3.1969-29.44375-13.88428-42.0647a23.66937,23.66937,0,0,0-19.75537-8.29179l-19.7975,1.41411A23.70939,23.70939,0,0,0,343.635,230.85851v0c-4.72724,6.42917-7.25736,12.84055-5.66438,19.21854-7.08065,4.83882-8.27029,10.67977-5.08851,17.2644,2.698,4.14592,2.66928,8.18161-.12275,12.1056a55.89079,55.89079,0,0,0-8.31011,16.5061Z" transform="translate(-203.5 -174.13424)" fill="#2f2e41"></path>
@@ -144,7 +145,7 @@
                             <div class="form-group">
                                 <label for="heroName" class="hero__label">Podaj nazwę postaci aby sprawdzić
                                     szczegóły</label>
-                                <input id="heroName" aria-describedby="heroHelp" class="form-control  hero__input" type="text" placeholder="Nazwa postaci">
+                                <input id="heroName" aria-describedby="heroHelp" class="form-control  " type="text" placeholder="Nazwa postaci">
                                 <small id="heroHelp" class="form-text text-muted">Zakupów można dokonywać bez
                                     rejestracji. Założenie konta to dodatkowe <a href="#" class="color-gold">
                                         bonusy</a>.</small>
@@ -751,6 +752,102 @@ C176.685,416.852,171.094,422.443,164.197,422.443z"></path>
             </div>
         </div>
     </footer>
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Zaloguj się</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="loginEmail">Email:</label>
+                            <input id="loginEmail" class="form-control" type="email" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Hasło:</label>
+                            <input id="loginPassword" class="form-control" type="password" required="">
+                            <btn class="btn btn-link color-gold px-0" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#forgotPasswordModal">Zapomniałeś
+                                hasła?</btn>
+                        </div>
+                        <button type="submit" class="btn btn-warning px-5 py-2 my-2">Zaloguj się</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Przypomnienie hasła</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="forgotPasswordEmail">Email:</label>
+                            <input id="forgotPasswordEmail" class="form-control" type="email" required="">
+                        </div>
+
+                        <button type="submit" class="btn btn-warning px-5 py-2 my-2">Wyślij instrukcję zmiany
+                            hasła</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Przypomnienie hasła</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="registerEmail">Email:</label>
+                            <input id="registerEmail" class="form-control" type="email" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerName">Nazwa użytkownika:</label>
+                            <input id="registerName" class="form-control" type="text" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPassword">Hasło:</label>
+                            <input id="registerPassword" class="form-control" type="password" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerRepeatPassword">Powtórz hasło:</label>
+                            <input id="registerRepeatPassword" class="form-control" type="password" required="">
+                        </div>
+
+                        <label><input type="checkbox" class="mr-2">Potwierdzam 100% znajomość <a class="color-gold" href="#">
+                                regulaminu</a>.
+                        </label>
+
+                        <button type="submit" class="btn btn-warning px-5 py-2 my-2">Załóż konto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
