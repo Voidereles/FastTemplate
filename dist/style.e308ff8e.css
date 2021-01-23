@@ -228,7 +228,7 @@ a.color-gold:hover, a.color-gold:focus {
 
 .main {
   background: #2F2E41;
-  padding-top: 80px;
+  margin-top: 80px;
   min-height: calc(100vh - 235px);
 }
 
@@ -498,6 +498,9 @@ a.color-gold:hover, a.color-gold:focus {
   .navbar-brand .img-fluid {
     max-height: 40px;
   }
+  .main {
+    margin-top: 60px;
+  }
   .hero {
     padding-bottom: 3rem;
   }
@@ -544,6 +547,9 @@ a.color-gold:hover, a.color-gold:focus {
   }
   .pricing__grid--double .option:nth-child(even) {
     background-color: #1e1d29;
+  }
+  .contact-form {
+    border-radius: 0;
   }
 }
 

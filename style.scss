@@ -237,7 +237,7 @@ a.color-gold {
 
 .main {
     background: $blackSpace;
-    padding-top: 80px;
+    margin-top: 80px;
     min-height: calc(100vh - 235px);
 
 }
@@ -533,6 +533,11 @@ a.color-gold {
         max-height: 40px;
     }
 
+    .main {
+
+        margin-top: 60px;
+    }
+
     .hero {
         padding-bottom: 3rem;
 
@@ -596,6 +601,10 @@ a.color-gold {
 
     }
 
+
+    .contact-form {
+        border-radius: 0;
+    }
 }
 
 @media (min-width:992px) {
