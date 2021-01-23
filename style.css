@@ -292,7 +292,7 @@ a.color-gold:hover, a.color-gold:focus {
 
 .features__check-mark {
   height: 3rem;
-  max-width: 3rem;
+  width: 3rem;
 }
 
 .features__text {
@@ -449,7 +449,7 @@ a.color-gold:hover, a.color-gold:focus {
 }
 
 .footer__copyright {
-  border-top: 1px solid #dea64a;
+  border-top: 1px solid #040405;
   text-align: center;
 }
 
@@ -535,10 +535,6 @@ a.color-gold:hover, a.color-gold:focus {
   }
   .pricing__grid--double .option:nth-child(even) {
     background-color: #1e1d29;
-  }
-  .features .lute {
-    -webkit-transform: scale(0.7) translateX(5%);
-            transform: scale(0.7) translateX(5%);
   }
 }
 

@@ -308,7 +308,7 @@ a.color-gold {
 
     &__check-mark {
         height: 3rem;
-        max-width: 3rem;
+        width: 3rem;
     }
 
     &__text {
@@ -484,7 +484,7 @@ a.color-gold {
     margin-top: -1px;
 
     &__copyright {
-        border-top: 1px solid $goldSunray;
+        border-top: 1px solid darken($color: $blackSpace, $amount: 20%);
         text-align: center;
     }
 
@@ -591,16 +591,8 @@ a.color-gold {
             }
         }
 
-        // .option:nth-child(even) {
-        //     background-color: darken($color: $blackSpace, $amount: 8%);
-        // }
     }
 
-    .features {
-        .lute {
-            transform: scale(0.7) translateX(5%);
-        }
-    }
 }
 
 @media (min-width:992px) {
