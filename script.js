@@ -8,12 +8,12 @@ function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
-        if (this.window.pageYOffset > 80) {
+        if (this.window.pageYOffset > 60) {
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("fixedNavbar").style.top = "0";
                 document.getElementById("fixedNavbar").style.background = "#EFE9E7";
             } else {
-                document.getElementById("fixedNavbar").style.top = "-100px";
+                document.getElementById("fixedNavbar").style.top = "-81px";
                 document.getElementById("fixedNavbar").style.background = "initial";
             }
             prevScrollpos = currentScrollPos;

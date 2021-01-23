@@ -57,6 +57,7 @@ a.color-gold:hover, a.color-gold:focus {
 }
 
 .navbar {
+  background: #EFE9E7;
   height: 80px;
   padding: 0px 75px;
   z-index: 5;
@@ -221,11 +222,13 @@ a.color-gold:hover, a.color-gold:focus {
 
 .main {
   background: #2F2E41;
-  margin-top: 80px;
-  min-height: calc(100vh - 250px);
+  padding-top: 80px;
+  min-height: calc(100vh - 235px);
 }
 
 .hero {
+  margin-top: -80px;
+  padding-top: 80px;
   background: #EFE9E7;
 }
 

@@ -20731,12 +20731,12 @@ function headerOnScroll() {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
 
-    if (this.window.pageYOffset > 80) {
+    if (this.window.pageYOffset > 60) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("fixedNavbar").style.top = "0";
         document.getElementById("fixedNavbar").style.background = "#EFE9E7";
       } else {
-        document.getElementById("fixedNavbar").style.top = "-100px";
+        document.getElementById("fixedNavbar").style.top = "-81px";
         document.getElementById("fixedNavbar").style.background = "initial";
       }
 
@@ -20832,7 +20832,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43295" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43255" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

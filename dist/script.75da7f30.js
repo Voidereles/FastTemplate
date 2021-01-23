@@ -20731,12 +20731,12 @@ function headerOnScroll() {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
 
-    if (this.window.pageYOffset > 80) {
+    if (this.window.pageYOffset > 60) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("fixedNavbar").style.top = "0";
         document.getElementById("fixedNavbar").style.background = "#EFE9E7";
       } else {
-        document.getElementById("fixedNavbar").style.top = "-100px";
+        document.getElementById("fixedNavbar").style.top = "-81px";
         document.getElementById("fixedNavbar").style.background = "initial";
       }
 
@@ -20804,7 +20804,7 @@ $(function () {
     }
   });
 });
-},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","ion-rangeslider":"node_modules/ion-rangeslider/js/ion.rangeSlider.js"}],"../../../../AppData/Roaming/npm-cache/_npx/12120/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","ion-rangeslider":"node_modules/ion-rangeslider/js/ion.rangeSlider.js"}],"../../../../AppData/Roaming/npm-cache/_npx/15632/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -20832,7 +20832,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61757" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62296" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -21008,5 +21008,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/12120/node_modules/parcel/src/builtins/hmr-runtime.js","script.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/15632/node_modules/parcel/src/builtins/hmr-runtime.js","script.js"], null)
 //# sourceMappingURL=/script.75da7f30.js.map
